@@ -25,7 +25,7 @@ const typeDefs = `
         getUserById(userId: ID!): User
     }
     type Mutation{
-        saveBookForUser(bookId: ID!, userId: ID!): User
+        deleteBook(bookId: ID!, userId: ID!): User
         addUser(username: String!, email: String!, password: String!): Auth
         loginUser(email: String!, password: String!): Auth
         saveBook(input: BookInput!): User

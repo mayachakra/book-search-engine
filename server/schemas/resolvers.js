@@ -1,6 +1,6 @@
 const { User, Book } = require('../models');
 const { signToken } = require('../utils/auth');
-const { AuthenticationError } = require ('apollo-server-express');
+const { AuthenticationError } = require ('@apollo/server');
 
 const resolvers = {
     Query: {
@@ -14,7 +14,6 @@ const resolvers = {
         
     },
     Mutation: {
-
         deleteBook: async (_, {bookId, userId}) => {
             const book = await Book.findById(bookId);
             if(!book){
